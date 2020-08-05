@@ -21,8 +21,8 @@ public class base {
 
 	public WebDriver initializeBrowser() throws IOException {
 		pro = new Properties();
-		FileInputStream fis = new FileInputStream(
-				"F:\\Automation 2020\\E2EProject\\src\\main\\java\\Academy\\data.properties");
+		
+		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Academy\\data.properties");
 		pro.load(fis);
 		//String browserName=System.getProperty("browser");
 	
