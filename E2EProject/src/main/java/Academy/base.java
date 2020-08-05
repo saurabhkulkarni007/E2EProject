@@ -31,14 +31,14 @@ public class base {
 		// Uses data.properties values for browser field
 
 		if (browserName.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "F:\\Automation 2020\\ChromeDriver 83\\chromedriver.exe");
-			driver = new ChromeDriver();
+					System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\main\\java\\Academy\\chromedriver.exe");
+					driver = new ChromeDriver();
 		}
 
 		if (browserName.equals("firefox"))
 
 		{
-			System.setProperty("webdriver.gecko.driver", "F:\\Automation 2020\\Firefox Drivers\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\java\\Academy\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
 

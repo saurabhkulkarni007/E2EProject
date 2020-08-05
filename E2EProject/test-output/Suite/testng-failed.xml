@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="Academy.Listners"/>
+  </listeners>
   <test thread-count="5" name="Test1(failed)" parallel="tests">
     <classes>
       <class name="Academy.HomePagePassTest">
@@ -17,7 +20,7 @@
       <class name="Academy.HomePageFailTest">
         <methods>
           <include name="launchBrowser"/>
-          <include name="basepageNavigation" invocation-numbers="1"/>
+          <include name="basepageNavigation"/>
           <include name="closebrowser"/>
         </methods>
       </class> <!-- Academy.HomePageFailTest -->
