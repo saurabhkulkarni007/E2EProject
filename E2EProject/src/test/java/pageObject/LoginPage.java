@@ -7,10 +7,10 @@ import org.openqa.selenium.WebElement;
 public class LoginPage {
 	
 	public WebDriver driver;
-	By email=By.id("user_email");
-	By password=By.id("user_password");
-	By loginbutton=By.xpath("//input[@value='Log In']");
-	By alertinvalidlogindata=By.xpath("//div[@role='alert']");
+	private By email=By.id("user_email");
+	private By password=By.id("user_password");
+	private By loginbutton=By.xpath("//input[@value='Log In']");
+	private By alertinvalidlogindata=By.xpath("//div[@role='alert']");
 	
 	public LoginPage(WebDriver driver) {
 		// TODO Auto-generated constructor stub

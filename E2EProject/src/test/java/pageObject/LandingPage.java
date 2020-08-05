@@ -7,8 +7,8 @@ import org.openqa.selenium.WebElement;
 public class LandingPage {
 	
 	public WebDriver driver;
-	By Login=By.xpath("//span[text()='Login']");
-	By Contactus=By.xpath("//li/a[text()='Contact']");
+	private By Login=By.xpath("//span[text()='Login']");
+	private By Contactus=By.xpath("//li/a[text()='Contact']");
 	
 	
 	public LandingPage(WebDriver driver) {

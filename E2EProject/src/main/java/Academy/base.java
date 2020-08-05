@@ -24,8 +24,10 @@ public class base {
 		FileInputStream fis = new FileInputStream(
 				"F:\\Automation 2020\\E2EProject\\src\\main\\java\\Academy\\data.properties");
 		pro.load(fis);
-		String browserName=System.getProperty("browser");
-		//String browserName = pro.getProperty("browser");
+		//String browserName=System.getProperty("browser");
+	
+		String browserName = pro.getProperty("browser");
+		System.out.println(browserName);
 		// Uses data.properties values for browser field
 
 		if (browserName.equals("chrome")) {
