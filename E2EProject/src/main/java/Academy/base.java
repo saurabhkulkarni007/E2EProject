@@ -12,6 +12,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class base {
@@ -41,6 +42,15 @@ public class base {
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\java\\Academy\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
+
+		if (browserName.equals("headlesschrome")) {
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\main\\java\\Academy\\chromedriver.exe");
+			ChromeOptions option=new ChromeOptions();
+			option.addArguments("--headless");
+			
+			driver = new ChromeDriver(option);
+}
+
 
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
